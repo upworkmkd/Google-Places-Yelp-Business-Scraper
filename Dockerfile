@@ -1,16 +1,11 @@
-FROM apify/actor-node-puppeteer-chrome:20
+FROM apify/actor-node-puppeteer-chrome:22
 
-# Copy package files
+# Copy pre-built files
+COPY dist/ ./dist/
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install --only=production
-
-# Copy source code
-COPY . ./
-
-# Build TypeScript
-RUN npm run build
+# Install only production dependencies
+RUN npm ci --only=production --no-audit --no-fund
 
 # Set the command to run the actor
 CMD ["node", "dist/main.js"]
