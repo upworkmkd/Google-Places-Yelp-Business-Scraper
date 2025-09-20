@@ -12,7 +12,8 @@
     "test:headless": "HEADLESS=true npm run test:local",
     "test:single": "npm run build && node -e \"require('./dist/test.js').testDeduplication()\"",
     "test:minimal": "npm run build && node test-minimal-local.js",
-    "test:simple": "npm run build && node test-simple.js"
+    "test:simple": "npm run build && node test-simple.js",
+    "deploy": "apify push"
   },
   "keywords": [
     "apify",
