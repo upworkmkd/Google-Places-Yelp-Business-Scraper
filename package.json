@@ -1,0 +1,44 @@
+{
+  "name": "local-business-data-extractor",
+  "version": "0.1.0",
+  "description": "Extracts and merges local business data from Google Maps, Yelp, and Facebook Pages with contact details, ratings, and social enrichment.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "test:local": "npm run build && node test-local.js",
+    "test:headless": "HEADLESS=true npm run test:local",
+    "test:single": "npm run build && node -e \"require('./dist/test.js').testDeduplication()\"",
+    "test:minimal": "npm run build && node test-minimal-local.js",
+    "test:simple": "npm run build && node test-simple.js"
+  },
+  "keywords": [
+    "apify",
+    "scraper",
+    "local-business",
+    "google-maps",
+    "yelp",
+    "facebook",
+    "data-extraction"
+  ],
+  "author": "Manoj Dhiman",
+  "license": "MIT",
+  "dependencies": {
+    "apify": "^3.1.0",
+    "puppeteer": "^21.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "axios": "^1.6.0",
+    "fuse.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

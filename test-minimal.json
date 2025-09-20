@@ -1,0 +1,8 @@
+{
+  "keywords": ["coffee shop"],
+  "locations": ["San Francisco"],
+  "maxResultsPerSource": 5,
+  "includeFacebook": false,
+  "includeYelp": true,
+  "includeGoogleMaps": true
+}

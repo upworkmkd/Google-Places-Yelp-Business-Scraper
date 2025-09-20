@@ -1,0 +1,10 @@
+{
+  "name": "local-business-data-extractor",
+  "title": "Local Business Data Extractor (Google + Yelp + FB)",
+  "description": "Extracts and merges local business data from Google Maps, Yelp, and Facebook Pages with contact details, ratings, and social enrichment.",
+  "version": "0.1",
+  "author": "Manoj Dhiman",
+  "actorSpecification": 1,
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile"
+}

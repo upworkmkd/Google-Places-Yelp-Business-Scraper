@@ -1,0 +1,8 @@
+{
+  "keywords": ["plumber", "electrician"],
+  "locations": ["New York", "Los Angeles"],
+  "maxResultsPerSource": 10,
+  "includeFacebook": true,
+  "includeYelp": true,
+  "includeGoogleMaps": true
+}

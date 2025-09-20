@@ -1,0 +1,52 @@
+{
+  "title": "Local Business Data Extractor Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "keywords": {
+      "title": "Business Keywords",
+      "type": "array",
+      "description": "Array of business types/keywords to search for (e.g., ['plumber', 'electrician'])",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "locations": {
+      "title": "Locations",
+      "type": "array",
+      "description": "Array of locations to search in (e.g., ['New York', 'Los Angeles'])",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "maxResultsPerSource": {
+      "title": "Max Results Per Source",
+      "type": "integer",
+      "description": "Maximum number of results to extract from each source (Google, Yelp, Facebook)",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 200
+    },
+    "includeFacebook": {
+      "title": "Include Facebook Scraping",
+      "type": "boolean",
+      "description": "Whether to include Facebook business page scraping",
+      "default": true
+    },
+    "includeYelp": {
+      "title": "Include Yelp Scraping",
+      "type": "boolean",
+      "description": "Whether to include Yelp scraping",
+      "default": true
+    },
+    "includeGoogleMaps": {
+      "title": "Include Google Maps Scraping",
+      "type": "boolean",
+      "description": "Whether to include Google Maps scraping",
+      "default": true
+    }
+  },
+  "required": ["keywords", "locations"]
+}
